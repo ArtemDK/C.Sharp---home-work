@@ -6,7 +6,6 @@
 
 Console.Write("Введите номер дня недели: ");
         int num = Convert.ToInt32(Console.ReadLine());
-
         if (num < 1 || num > 7)
             Console.Write($"для числа {num} нет дня недели");
             else if (num > 0 && num < 6) Console.Write($"{num} день недели - не выходной");
