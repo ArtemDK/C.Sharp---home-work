@@ -10,20 +10,20 @@ int b = Convert.ToInt32(Console.ReadLine());
 void Stepen(int did1, int did2)
 {
     int count = 0;
-    int did11=did1;
-     int did22=did2;
+    int did11 = did1;
+    int did22 = did2;
     {
         while (did2 > 1)
         {
             did2 = did2 - 1;
             count++;
         }
-        while (count >0)
+        while (count > 0)
         {
             did1 = did1 * did11;
             count--;
         }
     }
-Console.Write($"Число {did11} в степени {did22} = {did1}");
+    Console.Write($"Число {did11} в степени {did22} = {did1}");
 }
-Stepen(a,b);
+Stepen(a, b);
