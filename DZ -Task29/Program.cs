@@ -3,6 +3,7 @@
 
 // ------------------------ с 1 Методом -------------------
 Console.Clear();
+
 int[] Array(int n, int min, int max) 
 {
     Console.Write("[");
@@ -43,3 +44,21 @@ Array(8,0,100);
 // }
 // int[] rez = Arraycreate(8, 0, 100);
 // ArrayPrint(rez);
+
+// ------------------------ с 1 Методом и Массивом вне метода -------------------
+// Console.Clear();
+// int[] array = new int[8];
+
+// int[] CreateMas(int[] n)
+// {
+//     Console.Write("[");
+//     for (int i = 0; i < n.Length; i++)
+//     {
+//         n[i] = new Random().Next(0, 100);
+//         if (i != n.Length -1) Console.Write(n[i] + ", ");
+//         else Console.Write(n[i]);
+//     }
+//     Console.Write("]");
+//     return n;
+// }
+// CreateMas(array);
