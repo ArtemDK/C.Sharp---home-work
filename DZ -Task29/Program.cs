@@ -7,9 +7,10 @@ int[] Array(int n, int min, int max)
 {
     Console.Write("[");
     int[] a = new int[n];
+    Random r = new Random();
     for (int i = 0; i < a.Length; i++)
     {
-        a[i] = new Random().Next(min, max);
+        a[i] = r.Next(min, max);
         if (i < a.Length - 1) Console.Write(a[i] + ",");
         else Console.Write(a[i]);
     }
