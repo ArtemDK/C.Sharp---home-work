@@ -7,7 +7,7 @@ Console.WriteLine("Введите количество эементов Масс
 int qty = Convert.ToInt32(Console.ReadLine());
 if (qty <= 0)
 {
-    Console.WriteLine("Введите количество элементов должно быть больше нуля");
+    Console.WriteLine("Количество элементов должно быть больше нуля");
     return;
 }
 double[] create = CreateArray(qty, 0, 100);
