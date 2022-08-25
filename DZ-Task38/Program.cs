@@ -3,34 +3,39 @@
 // [3.5, 7.1, 22.9, 2.3, 78.5] -> 76.2
 
 Console.Clear();
-double[] create = CreateArray(2, 0, 100);
+Console.WriteLine("Введите количество эементов Массива: ");
+int qty = Convert.ToInt32(Console.ReadLine());
+if (qty <= 0)
+{
+    Console.WriteLine("Введите количество элементов должно быть больше нуля");
+    return;
+}
+double[] create = CreateArray(qty, 0, 100);
 Print(create);
 Console.Write(" -> ");
 double rez = MinMax(create);
-Console.WriteLine(Math.Round(rez,1,MidpointRounding.ToZero));
+Console.WriteLine(rez);
 
-double[] CreateArray(int size, int min, int max) // Название метода
+double[] CreateArray(int size, int min, int max)
 {
     if (size == 0)
-        return new double[] {} ; // проверка что массив не = 0
+        return new double[] { };
 
-    double[] array = new double[size]; // создание массива
+    double[] array = new double[size];
     Random rnd = new Random();
     for (int i = 0; i < size; i++)
     {
-        array[i] = Math.Round(rnd.NextDouble() * (max - min) + min,1, MidpointRounding.ToZero );
+        array[i] = Math.Round(rnd.NextDouble() * (max - min) + min, 1, MidpointRounding.ToZero);
     }
     return array;
 }
-
 void Print(double[] array)
 {
     Console.Write("[");
     for (int i = 0; i < array.Length; i++)
     {
-        // if (i < array.Length - 1) Console.Write(Math.Round(array[i], 1, MidpointRounding.ToZero) + ", ");
-        if (i < array.Length - 1) Console.Write(array[i]+ ", ");
-        else Console.Write(Math.Round(array[i], 1, MidpointRounding.ToZero));
+        if (i < array.Length - 1) Console.Write(array[i] + ", ");
+        else Console.Write(array[i]);
     }
     Console.Write("]");
 }
@@ -38,11 +43,11 @@ double MinMax(double[] array)
 {
     double min = array[0];
     double max = array[0];
-        for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
         if (array[i] < min) min = array[i];
         if (array[i] > max) max = array[i];
     }
-    double rezult = max-min;
+    double rezult = max - min;
     return rezult;
 }
