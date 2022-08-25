@@ -10,12 +10,12 @@ Console.Write(" -> ");
 int chet = NeChet(create);
 Console.WriteLine(chet);
 
-int[] CreateArray(int size) // Название метода
+int[] CreateArray(int size)
 {
     if (size == 0)
-        return new int[] { }; // проверка что массив не = 0
+        return new int[] { };
 
-    int[] array = new int[size]; // создание массива
+    int[] array = new int[size];
     Random rnd = new Random();
     for (int i = 0; i < size; i++)
     {

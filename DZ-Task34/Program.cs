@@ -19,7 +19,7 @@ int ChetneChet(int[] array)
     return count;
 }
 
-int[] CreateArray(int size) // Название метода
+int[] CreateArray(int size)
 {
     if (size == 0)
         return new int[] { }; // проверка что массив не = 0
