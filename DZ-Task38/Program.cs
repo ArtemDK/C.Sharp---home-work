@@ -18,7 +18,7 @@ double[] CreateArray(int size, int min, int max) // Название метод�
     Random rnd = new Random();
     for (int i = 0; i < size; i++)
     {
-        array[i] = rnd.NextDouble() * (max - min) + min;
+        array[i] = Math.Round(rnd.NextDouble() * (max - min) + min,1, MidpointRounding.ToZero );
     }
     return array;
 }
@@ -28,7 +28,8 @@ void Print(double[] array)
     Console.Write("[");
     for (int i = 0; i < array.Length; i++)
     {
-        if (i < array.Length - 1) Console.Write(Math.Round(array[i], 1, MidpointRounding.ToZero) + ", ");
+        // if (i < array.Length - 1) Console.Write(Math.Round(array[i], 1, MidpointRounding.ToZero) + ", ");
+        if (i < array.Length - 1) Console.Write(array[i]+ ", ");
         else Console.Write(Math.Round(array[i], 1, MidpointRounding.ToZero));
     }
     Console.Write("]");
