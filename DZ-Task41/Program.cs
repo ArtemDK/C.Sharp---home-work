@@ -37,6 +37,15 @@ void Pos(int[] array)
         if (array[i] > 0) count++;
     Console.WriteLine(count);
 }
+// void Pos1(int[] array1, int i = 0)
+// {
+//     if (i > array1.Length) return;
+    
+//     Console.Write(array1[i]);
+//     {
+//     Pos1(array1, i++);
+// }
+// }
 
 int[] result = Create(qty);
 Print(result);
