@@ -37,7 +37,7 @@ void Print(int[,] array)
 }
 void Print1(double[] array)
 {
-    Console.Write("Среднее арифметическое каждого столбца: [ ");
+    Console.Write("Среднее арифметическое каждого столбца матрицы: [ ");
     for (int i = 0; i < array.Length; i++)
     {
         if (i < array.Length - 1) Console.Write(array[i] + "; ");
