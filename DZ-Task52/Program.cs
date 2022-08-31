@@ -11,7 +11,6 @@ Print(create);
 double [] rezult = MiddleElem(create);
 Print1(rezult);
 
-
 int[,] CreateArray(int m1, int n1)
 {
     int[,] array = new int[m1, n1];
@@ -46,7 +45,6 @@ void Print1(double[] array)
     }
     Console.Write(" ]");
 }
-
 double[] MiddleElem(int[,] array)
 {
     double sum = 0;
